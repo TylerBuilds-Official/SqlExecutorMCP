@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sql-executor-mcp"
+version = "0.1.0"
+description = "SQL Executor MCP Server"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp",
+    "pyodbc",
+    "mysql-connector-python",
+    "sqlparse",
+]
+
+[project.scripts]
+sql-executor-mcp = "mcp_server.server:run"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mcp_server"]

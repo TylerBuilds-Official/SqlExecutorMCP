@@ -1,0 +1,32 @@
+{
+    "connections": {
+        "ExampleDB_01": {
+            "driver": "sql_server",
+            "host": "YOUR_SQL_SERVER_HOST",
+            "port": 1433,
+            "database": "YOUR_DEFAULT_DB",
+            "username": "YOUR_USERNAME",
+            "password": "YOUR_PASSWORD",
+            "trusted_connection": true,
+            "driver_name": "ODBC Driver 17 for SQL Server"
+        },
+        "ExampleDB_02": {
+            "driver": "mysql",
+            "host": "YOUR_MYSQL_HOST",
+            "port": 3306,
+            "database": "YOUR_DEFAULT_DB",
+            "username": "YOUR_USERNAME",
+            "password": "YOUR_PASSWORD"
+        }
+    },
+    "allowlist": {
+        "ExampleDB_01": {
+            "databases": ["Data", "SomeData"],
+            "schemas": ["dbo", "staging"]
+        },
+        "ExampleDB_02": {
+            "databases": ["ExampleData", "Data"],
+            "schemas": ["*"]
+        }
+    }
+}
